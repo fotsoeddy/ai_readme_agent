@@ -1,3 +1,11 @@
+import os
+from datetime import datetime
+import google.generativeai as genai
+from dotenv import load_dotenv
+
+load_dotenv()
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
 def improve_readme_content(old_content: str) -> str:
     model = genai.GenerativeModel("gemini-2.0-flash")
 
