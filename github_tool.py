@@ -2,7 +2,7 @@ import os
 from github import Github
 
 def fetch_and_push_readme(new_content: str) -> str:
-    token = os.getenv("GITHUB_TOKEN")
+    token = os.getenv("PAT_TOKEN")  # use PAT_TOKEN env variable
     repo_name = os.getenv("REPO_NAME")
     branch = os.getenv("BRANCH", "main")
 

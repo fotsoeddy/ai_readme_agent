@@ -6,21 +6,19 @@ from email_reporter import send_commit_email
 load_dotenv(dotenv_path=".env")
 
 def run_daily_readme_agent():
-    from github import Github
     import os
+    from github import Github
 
-    token = os.getenv("PAT_TOKEN")  # use PAT_TOKEN here
+    token = os.getenv("PAT_TOKEN")  # use PAT_TOKEN env variable
     print(f"PAT_TOKEN is set: {'Yes' if token else 'No'}")
     if token:
         print(f"Token preview: {token[:4]}{'*' * (len(token) - 8)}{token[-4:]}")
     else:
         print("⚠️ Warning: PAT_TOKEN is not set or empty.")
+        raise ValueError("PAT_TOKEN environment variable not set")
 
     repo_name = os.getenv("REPO_NAME")
     branch = os.getenv("BRANCH", "main")
-
-    if not token:
-        raise ValueError("PAT_TOKEN environment variable not set")
 
     g = Github(token)
     repo = g.get_repo(repo_name)
