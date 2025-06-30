@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 from ai_chain import improve_readme_content
 from github_tool import fetch_and_push_readme
 from email_reporter import send_commit_email
+import re
 
 load_dotenv(dotenv_path=".env")
 
@@ -42,8 +43,15 @@ def run_daily_readme_agent():
     print(result)
 
     if "updated" in result.lower():
+        # Extract the quote from the new_content
+        quote_match = re.search(r"## 📅 Daily Quote\s*\n\s*> \"([^\"]+)\"", new_content)
+        quote_text = quote_match.group(1) if quote_match else "Here's today's inspiring quote."
+
         subject = f"✅ AI Agent Commit on {repo_name}"
-        body = f"The README was updated and committed by the AI agent.\n\n{result}"
+        body = (
+            f"The README was updated and committed by the AI agent.\n\n"
+            f"Here is today's quote:\n\n\"{quote_text}\""
+        )
         send_commit_email(subject, body)
 
 if __name__ == "__main__":
