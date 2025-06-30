@@ -2,7 +2,7 @@ name: Daily README Update
 
 on:
   schedule:
-    - cron: '26 8 * * *'  # 08:13 UTC (09:13 Cameroon time UTC+1)
+    - cron: '47 8 * * *'  # 09:46 Cameroon time (UTC+1)
   workflow_dispatch:
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.PAT_TOKEN }}    # Important for write access!
+          token: ${{ secrets.PAT_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -35,7 +35,6 @@ jobs:
           REPO_NAME: ${{ github.repository }}
           BRANCH: main
 
-          # ✅ Email environment variables
           EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
           EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
           EMAIL_HOST_USER: ${{ secrets.EMAIL_HOST_USER }}
