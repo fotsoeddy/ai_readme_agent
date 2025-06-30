@@ -2,7 +2,7 @@ name: Daily README Update
 
 on:
   schedule:
-    - cron: '13 8 * * *'  # 08:10 Cameroon time (UTC+1)
+    - cron: '26 8 * * *'  # 08:13 UTC (09:13 Cameroon time UTC+1)
   workflow_dispatch:
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.PAT_TOKEN }}    # <-- important for write access!
+          token: ${{ secrets.PAT_TOKEN }}    # Important for write access!
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -30,8 +30,16 @@ jobs:
 
       - name: Run AI README agent
         env:
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}     # Pass PAT_TOKEN here, matches Python code
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           REPO_NAME: ${{ github.repository }}
           BRANCH: main
+
+          # ✅ Email environment variables
+          EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
+          EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
+          EMAIL_HOST_USER: ${{ secrets.EMAIL_HOST_USER }}
+          EMAIL_HOST_PASSWORD: ${{ secrets.EMAIL_HOST_PASSWORD }}
+          EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
+
         run: python main.py
