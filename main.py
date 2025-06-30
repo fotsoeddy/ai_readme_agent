@@ -9,9 +9,18 @@ def run_daily_readme_agent():
     from github import Github
     import os
 
-    token = os.getenv("GITHUB_TOKEN")
+    token = os.getenv("PAT_TOKEN")  # use PAT_TOKEN here
+    print(f"PAT_TOKEN is set: {'Yes' if token else 'No'}")
+    if token:
+        print(f"Token preview: {token[:4]}{'*' * (len(token) - 8)}{token[-4:]}")
+    else:
+        print("⚠️ Warning: PAT_TOKEN is not set or empty.")
+
     repo_name = os.getenv("REPO_NAME")
     branch = os.getenv("BRANCH", "main")
+
+    if not token:
+        raise ValueError("PAT_TOKEN environment variable not set")
 
     g = Github(token)
     repo = g.get_repo(repo_name)
@@ -20,7 +29,6 @@ def run_daily_readme_agent():
         file = repo.get_contents("README.md", ref=branch)
         old_content = file.decoded_content.decode()
     except Exception as e:
-        # Print list of files in root for debugging
         print("❌ README.md not found. Listing root files:")
         try:
             root_files = repo.get_contents("/", ref=branch)
@@ -28,15 +36,13 @@ def run_daily_readme_agent():
         except Exception as inner:
             print("⚠️ Could not list files:", inner)
         print("🛑 Error:", e)
-        return  # Stop execution gracefully
+        return
 
-    # Continue if README exists
     new_content = improve_readme_content(old_content)
     result = fetch_and_push_readme(new_content)
 
     print(result)
 
-    # Only send email if README was changed
     if "updated" in result.lower():
         subject = f"✅ AI Agent Commit on {repo_name}"
         body = f"The README was updated and committed by the AI agent.\n\n{result}"
