@@ -2,7 +2,7 @@ name: Daily README Update
 
 on:
   schedule:
-    - cron: '57 8 * * *'  # 09:56 Cameroon time (UTC+1)
+    - cron: '02 9 * * *'  # 10:02 Cameroon time (UTC+1)
   workflow_dispatch:
 
 jobs:
@@ -23,13 +23,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Log Trigger Type
-        run: echo "Triggered by: ${{ github.event_name }}"
-
       - name: Debug PAT token presence
         run: |
           echo "PAT_TOKEN is set: ${{ secrets.PAT_TOKEN != '' }}"
-          echo "Length of PAT_TOKEN: ${{ secrets.PAT_TOKEN && secrets.PAT_TOKEN.length }}"
+          if [ -n "${{ secrets.PAT_TOKEN }}" ]; then echo "PAT_TOKEN is not empty"; else echo "PAT_TOKEN is empty"; fi
 
       - name: Run AI README agent
         env:
