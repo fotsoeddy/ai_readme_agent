@@ -1,0 +1,43 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+env/
+*.env
+.venv/
+
+# Environment variables
+.env
+.env.*
+
+# IDE and editor settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python specific
+*.log
+*.pot
+*.pyc
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints
+
+# Pytest
+.pytest_cache/
+
+# Pipenv
+Pipfile.lock
+
+# GitHub Codespaces or devcontainers
+.devcontainer/
+
+# Ignore any local test files or data
+test_*.py
