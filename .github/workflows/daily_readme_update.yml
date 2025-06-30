@@ -2,7 +2,7 @@ name: Daily README Update
 
 on:
   schedule:
-    - cron: '37 7 * * *'  # Runs daily at 07:10 UTC = 08:10 Cameroon time
+    - cron: '43 7 * * *'  # Runs daily at 08:10 Cameroon time (UTC+1), so 07:10 UTC
   workflow_dispatch:
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
       - name: Run AI README agent
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           REPO_NAME: ${{ github.repository }}
           BRANCH: main
         run: python main.py
