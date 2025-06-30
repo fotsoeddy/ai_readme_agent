@@ -2,7 +2,7 @@ name: Daily README Update
 
 on:
   schedule:
-    - cron: '47 8 * * *'  # 09:46 Cameroon time (UTC+1)
+    - cron: '55 8 * * *'  # 09:55 Cameroon time (UTC+1)
   workflow_dispatch:
 
 jobs:
@@ -23,6 +23,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Log Trigger Type
+        run: echo "Triggered by: ${{ github.event_name }}"
+
       - name: Debug PAT token presence
         run: |
           echo "PAT_TOKEN is set: ${{ secrets.PAT_TOKEN != '' }}"
@@ -34,11 +37,9 @@ jobs:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           REPO_NAME: ${{ github.repository }}
           BRANCH: main
-
           EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
           EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
           EMAIL_HOST_USER: ${{ secrets.EMAIL_HOST_USER }}
           EMAIL_HOST_PASSWORD: ${{ secrets.EMAIL_HOST_PASSWORD }}
           EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
-
         run: python main.py
