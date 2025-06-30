@@ -2,7 +2,7 @@ name: Daily README Update
 
 on:
   schedule:
-    - cron: '43 7 * * *'  # Runs daily at 08:10 Cameroon time (UTC+1), so 07:10 UTC
+    - cron: '50 7 * * *'  # Runs daily at 08:10 Cameroon time (UTC+1), so 07:10 UTC
   workflow_dispatch:
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
 
       - name: Run AI README agent
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}       # <-- Use your PAT secret here
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           REPO_NAME: ${{ github.repository }}
           BRANCH: main
