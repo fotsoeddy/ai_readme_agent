@@ -15,9 +15,22 @@ def run_daily_readme_agent():
 
     g = Github(token)
     repo = g.get_repo(repo_name)
-    file = repo.get_contents("README.md", ref=branch)
-    old_content = file.decoded_content.decode()
 
+    try:
+        file = repo.get_contents("README.md", ref=branch)
+        old_content = file.decoded_content.decode()
+    except Exception as e:
+        # Print list of files in root for debugging
+        print("❌ README.md not found. Listing root files:")
+        try:
+            root_files = repo.get_contents("/", ref=branch)
+            print("📂 Files in root:", [f.path for f in root_files])
+        except Exception as inner:
+            print("⚠️ Could not list files:", inner)
+        print("🛑 Error:", e)
+        return  # Stop execution gracefully
+
+    # Continue if README exists
     new_content = improve_readme_content(old_content)
     result = fetch_and_push_readme(new_content)
 
