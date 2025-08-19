@@ -2,7 +2,11 @@ name: Daily README Update
 
 on:
   schedule:
-    - cron: '02 9 * * *'  # 10:02 Cameroon time (UTC+1)
+    - cron: '0 8 * * *'   # 09:00 Cameroon time
+    - cron: '0 11 * * *'  # 12:00 Cameroon time
+    - cron: '0 14 * * *'  # 15:00 Cameroon time
+    - cron: '0 17 * * *'  # 18:00 Cameroon time
+    - cron: '0 20 * * *'  # 21:00 Cameroon time
   workflow_dispatch:
 
 jobs:

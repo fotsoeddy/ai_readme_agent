@@ -9,11 +9,11 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 def improve_readme_content(old_content: str) -> str:
     model = genai.GenerativeModel("gemini-2.0-flash")
 
-    # New prompt about "new Eva life"
+    # New prompt: no poetry, clear, at least 5 lines, include author
     prompt = (
-        "Search your knowledge and generate one short, elegant, and inspiring quote "
-        "about 'new Eva life in technology'. "
-        "Make it poetic and powerful without mentioning an author."
+        "Generate a meaningful, direct, and practical quote of at least 5 lines about technology or progress. "
+        "Do not make it poetic or elegant. Keep the tone clear, simple, and real-world relevant. "
+        "Include the full name of the fictional or historical author at the end, using this format: - Author Name"
     )
     response = model.generate_content(prompt)
     quote = response.text.strip().strip('"')
