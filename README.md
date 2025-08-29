@@ -8,12 +8,12 @@ Every day, this file is automatically updated with a new quote, thanks to a Lang
 
 ## 📅 Daily Quote
 
-> "Technology isn't inherently good or bad.
-It's a tool. Like a hammer, it can build or destroy.
-The responsibility rests with the user, not the machine.
-Ignore the potential for misuse and you're setting yourself up for problems.
-Always ask, "What could go wrong?" before you build it.
+> "Technology promises to fix problems.
+It usually creates new ones you didn't foresee.
+Measure the second-order effects before you commit.
+A faster hammer can still break your thumb.
+Progress isn't always a straight line upwards.
 
-- Evelyn Reed"
+- Agnes Moorehead, Systems Engineer"
 
-*🕒 Updated on 2025-08-29 11:08*
+*🕒 Updated on 2025-08-29 14:09*
