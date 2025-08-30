@@ -8,12 +8,11 @@ Every day, this file is automatically updated with a new quote, thanks to a Lang
 
 ## 📅 Daily Quote
 
-> "Technology's promise isn't automatic betterment.
-It's a tool, nothing more, nothing less.
-Good tools amplify good intentions.
-Bad ones accelerate destruction, and inaction is not an option.
-Use it wisely, or it will use you.
+> "Technology gives you tools.
+More tools don't automatically equal better results.
+Figure out what you actually need to build.
+Otherwise, you'll just have a pile of expensive gadgets.
+Knowing *why* you're using tech matters more than the tech itself."
+- Elias Thorne"
 
-- Alan Turing"
-
-*🕒 Updated on 2025-08-30 14:07*
+*🕒 Updated on 2025-08-30 17:05*
