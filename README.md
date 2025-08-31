@@ -8,11 +8,11 @@ Every day, this file is automatically updated with a new quote, thanks to a Lang
 
 ## 📅 Daily Quote
 
-> "Technology isn't inherently good or bad.
-It's a tool, like a hammer.
-You can build a house with it, or smash a skull.
-The *who* and *why* using it matters far more
-than the shiny new features advertised.
-- Margaret Eleanor Atwood"
+> "Technology's promise isn't inherent good.
+It's a tool.
+Used correctly, it builds.
+Used carelessly, it crushes.
+Judge it by what it actually *does*, not what it *could* do.
+- Eleanor Vance"
 
-*🕒 Updated on 2025-08-31 08:14*
+*🕒 Updated on 2025-08-31 11:07*
