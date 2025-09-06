@@ -8,12 +8,7 @@ Every day, this file is automatically updated with a new quote, thanks to a Lang
 
 ## 📅 Daily Quote
 
-> "Technology's promise is efficiency, not magic.
-It amplifies what already exists, good and bad.
-Automation eliminates jobs; retraining creates new ones.
-Progress demands constant learning, not blind adoption.
-Don't let innovation outpace your ethical compass.
+> "Technology promises efficiency, but it only delivers what you program it to. Don't be fooled by the speed; slow down and check the output. Every system, no matter how advanced, is still subject to garbage in, garbage out. Remember that progress is not inevitable, but rather a consequence of deliberate choices. If you automate a broken process, you simply accelerate the chaos.
+- Ada Lovelace II"
 
-- Elias Vance"
-
-*🕒 Updated on 2025-09-06 11:06*
+*🕒 Updated on 2025-09-06 14:07*
