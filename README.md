@@ -9,11 +9,11 @@ Every day, this file is automatically updated with a new quote, thanks to a Lang
 ## 📅 Daily Quote
 
 > "Technology isn't inherently good or bad.
-It amplifies what we already are.
-So build responsibly, consider the second order effects.
-Focus on human needs, not just the new shiny thing.
-Otherwise, you're just accelerating towards a cliff.
+It's a tool, like a hammer.
+You can build a house with it or break a skull.
+The crucial question is: who's holding the hammer,
+and what do they intend to do with it?
 
-- Ada Lovelace Turing"
+- Eleanor Vance"
 
-*🕒 Updated on 2025-09-11 11:07*
+*🕒 Updated on 2025-09-11 14:10*
