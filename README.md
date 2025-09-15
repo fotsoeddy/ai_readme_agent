@@ -8,12 +8,12 @@ Every day, this file is automatically updated with a new quote, thanks to a Lang
 
 ## 📅 Daily Quote
 
-> "Technology isn't inherently good or bad. It's a tool.
-Like any tool, it can be used to build or destroy.
-The responsibility falls on the user.
-Focus on the problem you are trying to solve, not the novelty of the tech.
-Otherwise, you’re just creating faster ways to make bigger mistakes.
+> "Technology changes everything.
+That includes what we need to know.
+Skills become obsolete, faster than ever before.
+Focus less on mastering a specific tool,
+And more on learning *how* to learn.
 
 - Elias Vance"
 
-*🕒 Updated on 2025-09-15 08:18*
+*🕒 Updated on 2025-09-15 11:08*
