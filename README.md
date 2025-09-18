@@ -8,12 +8,12 @@ Every day, this file is automatically updated with a new quote, thanks to a Lang
 
 ## 📅 Daily Quote
 
-> "Technology doesn't fix broken foundations.
-If your people are exploited, new gadgets just exploit them faster.
-Progress isn't measured in megabytes or gigahertz.
-It's measured in improved lives, fairly distributed.
-Don't mistake efficiency for morality.
+> "Technology advances whether we're ready or not.
+Focus less on its potential utopia, more on its real-world impact.
+Ask who benefits, who is left behind, and at what cost.
+Uncritical adoption is a recipe for reinforcing existing inequalities.
+Think hard about consequences, because code isn’t neutral.
 
-- Evelyn Reed"
+- Elias Thorne"
 
-*🕒 Updated on 2025-09-18 08:16*
+*🕒 Updated on 2025-09-18 11:07*
