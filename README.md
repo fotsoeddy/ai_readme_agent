@@ -8,11 +8,11 @@ Every day, this file is automatically updated with a new quote, thanks to a Lang
 
 ## 📅 Daily Quote
 
-> "Technology doesn't care about your feelings.
-It will automate your job, simplify a complex task,
-and create solutions you never thought possible,
-but it won't ask if you're ready for the change.
-Prepare yourself or be left behind.
-- Dr. Anya Sharma"
+> "Technology isn't neutral.
+It amplifies existing systems.
+If those systems are unequal,
+technology will make them even moreso.
+Focus on fairness, not just features.
+- Ada Lovelace Carmichael"
 
-*🕒 Updated on 2025-09-27 17:05*
+*🕒 Updated on 2025-09-27 20:19*
