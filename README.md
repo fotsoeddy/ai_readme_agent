@@ -8,7 +8,12 @@ Every day, this file is automatically updated with a new quote, thanks to a Lang
 
 ## 📅 Daily Quote
 
-> "Technology gives us power, but power without planning just makes bigger messes faster. Before you automate, understand what you're automating and *why*. Are you solving a problem, or just creating a new one down the line? Efficiency at the expense of human connection is a net loss, always. Remember, tools are meant to serve, not to dictate.
-- Anya Sharma"
+> "Technology doesn't wait for permission.
+It only cares about what's possible and profitable.
+Ethical considerations are an afterthought,
+a damage control exercise when things break.
+If you're not shaping it, it's shaping you.
 
-*🕒 Updated on 2025-10-02 11:07*
+- Robert Mallory, Systems Engineer"
+
+*🕒 Updated on 2025-10-02 14:09*
